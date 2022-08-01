@@ -11,13 +11,17 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 export const Button = (_a) => {
-    var { children, backgroundColor, color, style } = _a, props = __rest(_a, ["children", "backgroundColor", "color", "style"]);
+    var { children, backgroundColor, color, width, height, style } = _a, props = __rest(_a, ["children", "backgroundColor", "color", "width", "height", "style"]);
     let _style = style || {};
     // override defaults
     if (backgroundColor)
         _style.backgroundColor = backgroundColor;
     if (color)
         _style.color = color;
+    if (width)
+        _style.width = width;
+    if (height)
+        _style.height = height;
     return (React.createElement("button", Object.assign({ style: _style }, props), children));
 };
 //# sourceMappingURL=Button.js.map
