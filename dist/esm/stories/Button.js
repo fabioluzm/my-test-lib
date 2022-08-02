@@ -17,8 +17,6 @@ import './button.css';
 export const Button = (_a) => {
     var { primary = false, size = 'medium', backgroundColor, label } = _a, props = __rest(_a, ["primary", "size", "backgroundColor", "label"]);
     const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-    return (<button type="button" className={['storybook-button', `storybook-button--${size}`, mode].join(' ')} style={{ backgroundColor }} {...props}>
-      {label}
-    </button>);
+    return (React.createElement("button", Object.assign({ type: "button", className: ['storybook-button', `storybook-button--${size}`, mode].join(' '), style: { backgroundColor } }, props), label));
 };
-//# sourceMappingURL=Button.jsx.map
+//# sourceMappingURL=Button.js.map

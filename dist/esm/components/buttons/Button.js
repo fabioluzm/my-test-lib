@@ -24,8 +24,6 @@ export const Button = (_a) => {
         _style.height = height;
     if (height)
         _style.opacity = height;
-    return (<button style={_style} {...props}>
-      {children}
-    </button>);
+    return (React.createElement("button", Object.assign({ style: _style }, props), children));
 };
-//# sourceMappingURL=Button.jsx.map
+//# sourceMappingURL=Button.js.map

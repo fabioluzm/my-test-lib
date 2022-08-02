@@ -18,7 +18,7 @@ export default {
         layout: 'fullscreen',
     },
 };
-const Template = (args) => <Page {...args}/>;
+const Template = (args) => React.createElement(Page, Object.assign({}, args));
 export const LoggedOut = Template.bind({});
 export const LoggedIn = Template.bind({});
 // More on interaction testing: https://storybook.js.org/docs/react/writing-tests/interaction-testing
@@ -27,4 +27,4 @@ LoggedIn.play = ({ canvasElement }) => __awaiter(void 0, void 0, void 0, functio
     const loginButton = yield canvas.getByRole('button', { name: /Log in/i });
     yield userEvent.click(loginButton);
 });
-//# sourceMappingURL=Page.stories.jsx.map
+//# sourceMappingURL=Page.stories.js.map

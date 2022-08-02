@@ -8,7 +8,7 @@ export default {
         layout: 'fullscreen',
     },
 };
-const Template = (args) => <Header {...args}/>;
+const Template = (args) => React.createElement(Header, Object.assign({}, args));
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
     user: {
@@ -17,4 +17,4 @@ LoggedIn.args = {
 };
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {};
-//# sourceMappingURL=Header.stories.jsx.map
+//# sourceMappingURL=Header.stories.js.map
