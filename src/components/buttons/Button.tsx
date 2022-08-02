@@ -5,9 +5,10 @@ export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAt
   color?: string;
   width?: string;
   height?: string;
+  opacity?: string;
 }
 
-export const Button: React.FunctionComponent<IButtonProps> = ({ children, backgroundColor, color, width, height, style, ...props }) => {
+export const Button: React.FunctionComponent<IButtonProps> = ({ children, backgroundColor, color, width, height, opacity, style, ...props }) => {
   let _style: React.CSSProperties = style || {};
 
   // override defaults
@@ -15,6 +16,7 @@ export const Button: React.FunctionComponent<IButtonProps> = ({ children, backgr
   if (color) _style.color = color;
   if (width) _style.width = width;
   if (height) _style.height = height;
+  if (height) _style.opacity = height;
 
   return (
     <button style={_style} {...props}>

@@ -1,0 +1,31 @@
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
+import React from 'react';
+export const Button = (_a) => {
+    var { children, backgroundColor, color, width, height, opacity, style } = _a, props = __rest(_a, ["children", "backgroundColor", "color", "width", "height", "opacity", "style"]);
+    let _style = style || {};
+    // override defaults
+    if (backgroundColor)
+        _style.backgroundColor = backgroundColor;
+    if (color)
+        _style.color = color;
+    if (width)
+        _style.width = width;
+    if (height)
+        _style.height = height;
+    if (height)
+        _style.opacity = height;
+    return (<button style={_style} {...props}>
+      {children}
+    </button>);
+};
+//# sourceMappingURL=Button.jsx.map
