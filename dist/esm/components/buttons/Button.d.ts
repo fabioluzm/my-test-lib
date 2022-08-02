@@ -1,9 +1,29 @@
-import React from 'react';
-export interface IButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+import './button.css';
+interface ButtonProps {
+    /**
+     * Is this the principal call to action on the page?
+     */
+    primary?: boolean;
+    /**
+     * What background color to use
+     */
     backgroundColor?: string;
-    color?: string;
-    width?: string;
-    height?: string;
-    opacity?: string;
+    /**
+     * How large should the button be?
+     */
+    size?: 'small' | 'medium' | 'large';
+    /**
+     * Button contents
+     */
+    label: string;
+    /**
+     * Optional click handler
+     */
+    onClick?: () => void;
 }
-export declare const Button: React.FunctionComponent<IButtonProps>;
+/**
+ * Primary UI component for user interaction
+ */
+export declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => JSX.Element;
+export {};
+//# sourceMappingURL=Button.d.ts.map
